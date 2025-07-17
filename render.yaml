@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: good-day-smart-backend
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    plan: free
+    envVars:
+      - key: PANCHANG_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
